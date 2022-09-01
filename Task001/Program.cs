@@ -22,15 +22,15 @@ int NumberFromUser (string message, string errorMessage)
 
 // возвращает массив размером mxn 
 
-double [,] array GetArray (int m, int n)
+double [,] GetArray (int m, int n)
 {
-    double[] result = new double[m, n];
+    double[,] result = new double[m, n];
     Random rand = new Random();
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i,j] = rand.NextDouble();
+            result[i,j] = rand.NextDouble()*100;
         }
     }
     return result;
@@ -40,11 +40,11 @@ double [,] array GetArray (int m, int n)
 
 void PrintArray (double [,] inArray)
 {
-for (int i = 0; i < inArray.Getlength(0); i++)
+for (int i = 0; i < inArray.GetLength(0); i++)
 {
-    for (int j = 0; j < inArray.Getlength(1); j++)
+    for (int j = 0; j < inArray.GetLength(1); j++)
     {
-       Console.Write($"{inArray[i,j]}"); 
+       Console.Write("{0,6:F2}", inArray[i,j]); 
     }
     Console.WriteLine();
 }
