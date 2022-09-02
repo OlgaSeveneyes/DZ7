@@ -64,7 +64,7 @@ if (iRous <= doneRous && jColumns <= doneColumns)
 }
 else
 {
-    Console.WriteLine("Tакого числа нет!");
+    Console.WriteLine($"({iRous};{jColumns}) -> такого числа в массиве нет!");
 }
 return ourArray[iRous-1, jColumns-1];
 }
