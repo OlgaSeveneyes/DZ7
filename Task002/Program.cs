@@ -63,6 +63,8 @@ if (iRous <= doneRous && jColumns <= doneColumns)
     Console.WriteLine($"Значение элемента в позиции ({iRous};{jColumns}) : {ourArray[iRous-1, jColumns-1]} ");
 }
 else
-Console.WriteLine("такого числа нет"); 
-return ourArray[iRous-1, jColumns-1];    
+{
+    Console.WriteLine("Tакого числа нет!");
+}
+return ourArray[iRous-1, jColumns-1];
 }
